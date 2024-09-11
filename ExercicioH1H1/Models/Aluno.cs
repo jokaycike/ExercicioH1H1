@@ -8,7 +8,7 @@ namespace ExercicioH1H1.Models
         [Required(ErrorMessage = "Insira Nome")]
         public string Nome {  get; set; }
 
-        [Required(ErrorMessage = "O RA é obrigatorio")]
+        [Required(ErrorMessage = "Insira Ra")]
         [ValidationRa(ErrorMessage = "Deve começar com RA e depois 6 numeros")]
         public string RA {  get; set; }
 
