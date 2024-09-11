@@ -9,9 +9,11 @@ namespace ExercicioH2H2.Validations
         {
             var codigoProduto = value as string;
 
-            if(codigoProduto != null) return false;
 
-            if(Regex.IsMatch(codigoProduto, @"^["))
+            if (string.IsNullOrEmpty(codigoProduto))
+                return false;
+
+            return Regex.IsMatch(codigoProduto, @"^[A-Z]{3}-\d{4}$");
         }
     }
 }
